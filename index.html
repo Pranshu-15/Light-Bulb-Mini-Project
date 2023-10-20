@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+        img{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bulb On/Off Mini Project</h1>
+    <div class="bulb"></div>
+    <button class="on-btn">On</button>
+    <button class="off-btn">Off</button>
+    <!-- <img src="lightBulb-off.png"> -->
+    <script>
+        let bulbElement = document.querySelector('.bulb');
+        let bulbOn = () => {
+            let newHtml = 
+                `
+                <img src="lightBulb-on.png">
+                `
+                bulbElement.innerHTML = newHtml;
+            }
+        
+        let onBtn = document.querySelector('.on-btn');
+        onBtn.addEventListener('click', bulbOn);
+
+        let bulbOff = () => {
+            let newHtml = `
+            <img src="lightBulb-off.png">
+            `
+            bulbElement.innerHTML = newHtml;
+        }
+        let offBtn = document.querySelector('.off-btn');
+        offBtn.addEventListener('click' , bulbOff);
+    </script>
+</body>
+</html>
